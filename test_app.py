@@ -21,8 +21,8 @@ class CastingAgencyTestCase(unittest.TestCase):
     """Define test variables and initialize app."""
     self.app = create_app()
     self.client = self.app.test_client
-    self.database_name = "casting_test"
-    self.database_path = "postgres://{}/{}".format('chris:admin@localhost:5432', self.database_name)
+    self.database_name = "daqkohdpr60brp"
+    self.database_path = "postgres://{}/{}".format('lsecavqykatntw:e6a6946e38c84e5a683ebde768b501fac876ea3fca49be5f9398e35d2fc89869@ec2-54-146-4-66.compute-1.amazonaws.com:5432', self.database_name)
     setup_db(self.app, self.database_path)
 
     self.new_actor = {
