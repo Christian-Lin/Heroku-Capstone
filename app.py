@@ -2,7 +2,6 @@ import os
 from flask import Flask, request, abort, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
-from flask_migrate import Migrate
 import json
 from models import *
 from auth import AuthError, requires_auth
@@ -28,7 +27,6 @@ def create_app(test_config=None):
   app = Flask(__name__)
   setup_db(app)
   CORS(app)
-  migrate = Migrate(app, db)
 
   # GET endpoints
   ###################################################
