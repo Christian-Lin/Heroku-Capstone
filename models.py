@@ -4,9 +4,10 @@ from datetime import datetime
 import os
 
 # App Setup
-# db_path = os.environ.get('DATABASE_URL')
-database_name = "capstone"
-db_path = "postgres://{}/{}".format('chris:admin@localhost:5432', database_name)
+db_path = os.environ.get('DATABASE_URL')
+# Local db info
+# database_name = "capstone"
+# db_path = "postgres://{}/{}".format('username:password@localhost:5432', database_name)
 db = SQLAlchemy()
 
 def setup_db(app, db_path=db_path):

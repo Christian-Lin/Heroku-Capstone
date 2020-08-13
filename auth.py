@@ -5,9 +5,11 @@ from functools import wraps
 from jose import jwt
 from urllib.request import urlopen
 
-AUTH0_DOMAIN = 'chris-fsnd.eu.auth0.com'
+# AUTH0_DOMAIN = 'chris-fsnd.eu.auth0.com'
+# API_AUDIENCE = 'Heroku'
+AUTH0_DOMAIN = os.environ.get('AUTH0_DOMAIN')
+API_AUDIENCE = os.environ.get('API_AUDIENCE')
 ALGORITHMS = ['RS256']
-API_AUDIENCE = 'Heroku'
 
 # AuthError Exception
 '''
